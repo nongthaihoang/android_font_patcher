@@ -2,12 +2,12 @@
 
 if [ -n $1 ]; then
     case $1 in
-		-cn )	FONT=Roboto/RobotoCondensed
+		-cn )	FONT=RobotoCondensed
 				NAME="Roboto Condensed"
 				shift
 				;;
 
-		* )		FONT=Roboto/Roboto
+		* )		FONT=Roboto
 				NAME=$FONT
 				;;
     esac
@@ -24,41 +24,39 @@ do
 		STYLE=Italic
 	elif [[ $i == *"-Light."* ]]; then
 		STYLE=Light
-		NAME=$NAME" Light"
+		NAME="$NAME Light"
 	elif [[ $i == *"-LightItalic."* ]]; then
 		STYLE=LightItalic
-		NAME=$NAME" Light"
+		NAME="$NAME Light"
 	elif [[ $i == *"-Thin."* ]]; then
 		STYLE=Thin
-		NAME=$NAME" Thin"
+		NAME="$NAME Thin"
 	elif [[ $i == *"-ThinItalic."* ]]; then
 		STYLE=ThinItalic
-		NAME=$NAME" Thin"
+		NAME="$NAME Thin"
 	elif [[ $i == *"-Medium."* ]]; then
 		STYLE=Medium
-		NAME=$NAME" Medium"
+		NAME="$NAME Medium"
 	elif [[ $i == *"-MediumItalic."* ]]; then
 		STYLE=MediumItalic
-		NAME=$NAME" Medium"
+		NAME="$NAME Medium"
 	elif [[ $i == *"-Bold."* ]]; then
 		STYLE=Bold
 	elif [[ $i == *"-BoldItalic."* ]]; then
 		STYLE=BoldItalic
 	elif [[ $i == *"-Black."* ]]; then
 		STYLE=Black
-		NAME=$NAME" Black"
+		NAME="$NAME Black"
 	elif [[ $i == *"-BlackItalic."* ]]; then
 		STYLE=BlackItalic
-		NAME=$NAME" Black"
+		NAME="$NAME Black"
 	fi
 
 	if [[ $STYLE != none ]]; then
 		RBT=$FONT-$STYLE.ttf
-		fontforge -script fontpatcher.pe $RBT $i "$NAME"
-		TMP=${i/./-patched.}
-		OUT=$(dirname $TMP)
-		mkdir -p $OUT/Roboto
-		RBT=$OUT/$RBT
-		mv $TMP $RBT
+		fontforge -script fontpatcher.pe Roboto/$RBT $i "$NAME"
+		TMP="${i%.*}-patched.ttf"
+		OUT=$(dirname $TMP)/$RBT
+		mv $TMP $OUT
 	fi
 done
