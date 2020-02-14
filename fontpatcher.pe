@@ -1,0 +1,22 @@
+#!/usr/bin/fontforge
+
+# Roboto font patcher script
+# by nongthaihoang @ xda
+
+Open($2)
+_newem=$em
+
+Open($1)
+RemoveAllKerns()
+Select(0ufb00, 0ufb01, 0ufb02, 0ufb03, 0ufb04, 0ufb05, 0ufb06)
+DetachAndRemoveGlyphs()
+SelectAll()
+UnlinkReference()
+ScaleToEm(_newem)
+
+Open($2)
+MergeFonts($1)
+Reencode("unicode")
+SetTTFName(0x409,1,$3)
+
+Generate($2:r + "-patched.ttf")
