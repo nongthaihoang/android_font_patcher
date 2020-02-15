@@ -8,11 +8,15 @@ Patch custom fonts to be used on Android.
 - Fontforge
 
 ## Usage
+- Clone the repo:
+```
+git clone https://github.com/nongthaihoang/android_font_patcher.git
+cd android_font_patcher
+```
 - Rename your fonts to match styles with Roboto:
 
   Thin | ThinItalic | Light | LightItalic | Regular | Italic
-
-  Medium | MediumItalic | Bold | BoldItalic | Black | BlackItalic
+  | Medium | MediumItalic | Bold | BoldItalic | Black | BlackItalic
 - Run command:
   ```
   ./font-patcher [-cn] [FONT]...
