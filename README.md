@@ -33,5 +33,5 @@ Patch custom fonts to be used on Android.
   
   For Windows:
   
-  `fontforge.exe -script fontpatcher.pe [Roboto] [Your font]`
+  `fontforge.exe -script fontpatcher.pe [Roboto] [Your font] ""`
 - The generated fonts will be named after Roboto and placed in the same folder as your fonts.
