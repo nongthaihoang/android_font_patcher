@@ -20,43 +20,44 @@ fi
 for i in "$@"
 do
 	STYLE=none
+	NEWNAME=$NAME
 	if [[ $i == *"-Regular."* ]]; then
 		STYLE=Regular
 	elif [[ $i == *"-Italic."* ]]; then
 		STYLE=Italic
 	elif [[ $i == *"-Light."* ]]; then
 		STYLE=Light
-		NAME="$NAME Light"
+		NEWNAME="$NAME Light"
 	elif [[ $i == *"-LightItalic."* ]]; then
 		STYLE=LightItalic
-		NAME="$NAME Light"
+		NEWNAME="$NAME Light"
 	elif [[ $i == *"-Thin."* ]]; then
 		STYLE=Thin
-		NAME="$NAME Thin"
+		NEWNAME="$NAME Thin"
 	elif [[ $i == *"-ThinItalic."* ]]; then
 		STYLE=ThinItalic
-		NAME="$NAME Thin"
+		NEWNAME="$NAME Thin"
 	elif [[ $i == *"-Medium."* ]]; then
 		STYLE=Medium
-		NAME="$NAME Medium"
+		NEWNAME="$NAME Medium"
 	elif [[ $i == *"-MediumItalic."* ]]; then
 		STYLE=MediumItalic
-		NAME="$NAME Medium"
+		NEWNAME="$NAME Medium"
 	elif [[ $i == *"-Bold."* ]]; then
 		STYLE=Bold
 	elif [[ $i == *"-BoldItalic."* ]]; then
 		STYLE=BoldItalic
 	elif [[ $i == *"-Black."* ]]; then
 		STYLE=Black
-		NAME="$NAME Black"
+		NEWNAME="$NAME Black"
 	elif [[ $i == *"-BlackItalic."* ]]; then
 		STYLE=BlackItalic
-		NAME="$NAME Black"
+		NEWNAME="$NAME Black"
 	fi
 
 	if [[ $STYLE != none ]]; then
 		RBT=$FONT-$STYLE.ttf
-		fontforge -script fontpatcher.pe Roboto/$RBT $i "$NAME"
+		fontforge -script fontpatcher.pe Roboto/$RBT $i "$NEWNAME"
 		TMP="${i%.*}-patched.ttf"
 		OUT=$(dirname $TMP)/$RBT
 		mv $TMP $OUT
