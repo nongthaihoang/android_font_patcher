@@ -1,10 +1,10 @@
-#!/usr/bin/fontforge
+#!/usr/bin/env fontforge
 
 # Roboto font patcher script
 # by nongthaihoang @ xda
 
 Open($2)
-_newem=$em
+_em=$em
 
 Open($1)
 RemoveAllKerns()
@@ -12,7 +12,7 @@ Select(0ufb00, 0ufb01, 0ufb02, 0ufb03, 0ufb04, 0ufb05, 0ufb06)
 DetachAndRemoveGlyphs()
 SelectAll()
 UnlinkReference()
-ScaleToEm(_newem)
+ScaleToEm(_em)
 
 Open($2)
 MergeFonts($1)

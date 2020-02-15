@@ -1,13 +1,15 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 if [ -n $1 ]; then
     case $1 in
-		-cn )	FONT=RobotoCondensed
+		-cn )
+				FONT=RobotoCondensed
 				NAME="Roboto Condensed"
 				shift
 				;;
 
-		* )		FONT=Roboto
+		* )
+				FONT=Roboto
 				NAME=$FONT
 				;;
     esac
