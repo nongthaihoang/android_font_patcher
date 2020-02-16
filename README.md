@@ -5,7 +5,7 @@ Patch custom fonts to be used on Android.
 
 ## What it does?
 - Fix missing glyphs.
-- Fix composite glyphs.
+- Fix misaligned glyphs.
 - Fix kerning.
 - Fix ligatures.
 - Fix font name.
