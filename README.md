@@ -22,7 +22,9 @@ cd android_font_patcher
 ```
 - Rename your fonts to match styles with Roboto:
 
-  Thin | ThinItalic | Light | LightItalic | Regular | Italic
+  `*-<STYLE>.<extension>`
+
+  `STYLE`: Thin | ThinItalic | Light | LightItalic | Regular | Italic
   | Medium | MediumItalic | Bold | BoldItalic | Black | BlackItalic
 - Run command:
   ```
@@ -40,7 +42,7 @@ cd android_font_patcher
   
   `./font-patcher Lato/Lato-*`
   
-  `./font-patcher -cn "Barlow Condensed Regular.ttf"`
+  `./font-patcher -cn "Barlow Condensed-Regular.ttf"`
   
   For Windows (not recommended):
   
