@@ -8,6 +8,7 @@ Patch custom fonts to be used on Android.
 - Fix composite glyphs.
 - Fix kerning.
 - Fix ligatures.
+- Fix ttf name.
 
 ## Requirements
 - Linux
@@ -41,7 +42,7 @@ cd android_font_patcher
   
   `./font-patcher -cn "Barlow Condensed Regular.ttf"`
   
-  For Windows:
+  For Windows (not recommended):
   
   `fontforge.exe -script fontpatcher.pe [Roboto] [Your font] ""`
 - The generated fonts will be named after Roboto and placed in the same folder as your fonts.
