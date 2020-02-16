@@ -3,7 +3,12 @@ Font patcher script by nongthaihoang @ xda
 
 Patch custom fonts to be used on Android.
 
-## Prerequisites
+## What it does?
+- Fix missing glyphs.
+- Fix composite glyphs.
+- Fix kerning.
+
+## Requirements
 - Linux
 - Fontforge
 
