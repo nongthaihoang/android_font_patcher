@@ -30,7 +30,7 @@ cd android_font_patcher
   
       -cn  use Roboto Condensed
   ```
-  Example:
+  Examples:
   
   `./font-patcher Lato-Regular.ttf`
   
@@ -46,3 +46,6 @@ cd android_font_patcher
   
   `fontforge.exe -script fontpatcher.pe [Roboto] [Your font] ""`
 - The generated fonts will be named after Roboto and placed in the same folder as your fonts.
+
+## Preview
+- See how this tool works in action: [video](https://photos.app.goo.gl/SDUuhMHdqLhqvytn6)
