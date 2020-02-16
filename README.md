@@ -8,7 +8,7 @@ Patch custom fonts to be used on Android.
 - Fix composite glyphs.
 - Fix kerning.
 - Fix ligatures.
-- Fix ttf name.
+- Fix font name.
 
 ## Requirements
 - Linux
