@@ -53,4 +53,4 @@ Patch custom fonts to be used on Android.
 - The generated fonts will be named after Roboto and placed in the same folder as your fonts.
 
 ## Preview
-- See how this tool works in action: [video](https://photos.app.goo.gl/SDUuhMHdqLhqvytn6)
+- See how this tool works in action: [video](https://photos.app.goo.gl/P7PpDwyUzWVxQAER8)
