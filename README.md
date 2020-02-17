@@ -1,5 +1,5 @@
 # Android Font Patcher
-Font patcher script by nongthaihoang @ xda
+Font patcher script by nongthaihoang @ xda.
 
 Patch custom fonts to be used on Android.
 
@@ -16,10 +16,10 @@ Patch custom fonts to be used on Android.
 
 ## Usage
 - Clone the repo:
-```
-git clone https://github.com/nongthaihoang/android_font_patcher.git
-cd android_font_patcher
-```
+  ```
+  git clone https://github.com/nongthaihoang/android_font_patcher.git
+  cd android_font_patcher
+  ```
 - Rename your fonts to match styles with Roboto:
 
   `*-<STYLE>.<extension>`
@@ -33,16 +33,17 @@ cd android_font_patcher
       -cn  use Roboto Condensed
   ```
   Examples:
+  ```
+  ./font-patcher Lato-Regular.ttf
   
-  `./font-patcher Lato-Regular.ttf`
+  ./font-patcher Inter-Regular.otf Lato-Bold.ttf
   
-  `./font-patcher Inter-Regular.otf Lato-Bold.ttf`
+  ./font-patcher Lato/Lato-Regular.ttf
   
-  `./font-patcher Lato/Lato-Regular.ttf`
+  ./font-patcher Lato/Lato-*
   
-  `./font-patcher Lato/Lato-*`
-  
-  `./font-patcher -cn "Barlow Condensed-Regular.ttf"`
+  ./font-patcher -cn "Barlow Condensed-Regular.ttf"`
+  ```
   
   For Windows (not recommended):
   
