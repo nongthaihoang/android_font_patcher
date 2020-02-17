@@ -42,12 +42,14 @@ Patch custom fonts to be used on Android.
   
   ./font-patcher Lato/Lato-*
   
-  ./font-patcher -cn "Barlow Condensed-Regular.ttf"`
+  ./font-patcher -cn "Barlow Condensed-Regular.ttf"
   ```
   
   For Windows (not recommended):
   
-  `fontforge.exe -script fontpatcher.pe [Roboto] [Your font] ""`
+  ```
+  fontforge.exe -script fontpatcher.pe [Roboto] [Your font] ""
+  ```
 - The generated fonts will be named after Roboto and placed in the same folder as your fonts.
 
 ## Preview
